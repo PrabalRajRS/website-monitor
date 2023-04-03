@@ -48,7 +48,7 @@ function App() {
             />
             <button onClick={addWebsite}>Add</button>
             {
-                websiteList.length && (
+                websiteList.length > 0 && (
                     <table style={{ borderCollapse: "collapse" }}>
                         <thead>
                             <tr>
