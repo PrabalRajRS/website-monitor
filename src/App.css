@@ -1,4 +1,4 @@
-.website-monitor-container{
+.website-monitor-container {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -7,21 +7,36 @@
   justify-content: space-evenly;
 }
 
-input{
+input {
   height: 30px;
-  width:200px;
+  width: 250px;
   border: 2px rgb(204, 204, 204) solid;
   border-radius: 5px;
 }
 
-button{
+button {
   height: 30px;
   width: 100px;
   border-radius: 5px;
   border: 2px grey solid;
 }
 
-th, td{
+.success {
+  border: 1px green solid;
+  color: green;
+}
+.error {
+  border: 1px red solid;
+  color: red;
+}
+
+th,
+td {
   border: 1px solid;
-  padding: 5px;
+  padding: 8px;
+  width: 80%;
+}
+
+th {
+  background-color: yellow;
 }

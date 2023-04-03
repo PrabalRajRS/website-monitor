@@ -40,29 +40,35 @@ function App() {
     return (
         <div className="website-monitor-container">
             <input
+                placeholder="Enter website here to be monitored"
                 type="text"
                 className="input"
                 value={websiteInput}
                 onChange={(e) => setWebsiteInput(e.target.value)}
             />
             <button onClick={addWebsite}>Add</button>
-            <table style={{ borderCollapse: "collapse" }}>
-                <thead>
-                    <tr>
-                        <th>Website</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {websiteList.map((website, index) => (
-                        <tr key={index}>
-                            <td>{website.url}</td>
-                            <td>{website.status}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+            {
+                websiteList.length && (
+                    <table style={{ borderCollapse: "collapse" }}>
+                        <thead>
+                            <tr>
+                                <th>Website</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {websiteList.map((website, index) => (
+                                <tr key={index}>
+                                    <td>{website.url}</td>
+                                    <td><button className={website.status === "Success" ? 'success' : 'error'}>{website.status}</button></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                )
+            }
+
+        </div >
     );
 }
 
